@@ -6,24 +6,9 @@
     <title>Query String Test</title>
 </head>
 <body>
-    <h1>Test Query String</h1>
-    <p id="queryResult"></p>
-
-    <script>
-        // Check if the query string is available
-        const queryString = window.location.search;
-        if (queryString) {
-            document.getElementById('queryResult').textContent = 'Query String: ' + queryString;
-            console.log('Query String:', queryString);
-        } else {
-            document.getElementById('queryResult').textContent = 'No query string found.';
-            console.log('No query string found.');
-        }
-    </script>
-
 <p>Thanks so much for <a href="https://housinghub.org.au">any feedback</a> you're willing to share <span id="nameDisplay">Guest</span>!
 
-<img src="https://dabuttonfactory.com/button.png?t=Your+CTA+copy&f=Open+Sans-Bold&ts=26&tc=fff&hp=45&vp=20&c=11&bgt=unicolored&bgc=15d798">
+<img src="https://dabuttonfactory.com/button.png?t=Your+CTA+copy&f=Open+Sans-Bold&ts=26&tc=fff&hp=45&vp=20&c=11&bgt=unicolored&bgc=0026d">
 
     <script>
 
@@ -44,8 +29,10 @@ function getUrlParameter(sParam)
     <script>
 
 var name = getUrlParameter('name');
+var ref = getUrlParameter('ref');
+var row = getUrlParameter('row');
 
-document.write("<h1>Well hi there " + name + ", how arya?</h1>");
+document.write("<p>Please copy and paste the following into your wrap-up email for " + name + ". The link and button will collect feedback specifically for the service for" + name + " (referred on " + ref + ")</p><p>Thanks so much for sharing any feedback you have!</p><img src=\"https://dabuttonfactory.com/button.png?t=Leave+" + name + "+Feedback&f=Open+Sans-Bold&ts=26&tc=fff&hp=45&vp=20&c=11&bgt=unicolored&bgc=0026d\"> ");
 
 document.getElementById('nameDisplay').textContent = name;
 
