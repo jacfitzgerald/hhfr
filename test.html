@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query String Test</title>
+</head>
+<body>
+    <h1>Test Query String</h1>
+    <p id="queryResult"></p>
+
+    <script>
+        // Check if the query string is available
+        const queryString = window.location.search;
+        if (queryString) {
+            document.getElementById('queryResult').textContent = 'Query String: ' + queryString;
+            console.log('Query String:', queryString);
+        } else {
+            document.getElementById('queryResult').textContent = 'No query string found.';
+            console.log('No query string found.');
+        }
+    </script>
+
+<p>Thanks so much for <a href="https://housinghub.org.au">any feedback</a> you're willing to share <span id="nameDisplay">Guest</span>!
+
+<img src="https://dabuttonfactory.com/button.png?t=Your+CTA+copy&f=Open+Sans-Bold&ts=26&tc=fff&hp=45&vp=20&c=11&bgt=unicolored&bgc=15d798">
+
+    <script>
+
+function getUrlParameter(sParam)
+{
+    var sPageURL = window.location.search.substring(1);
+    var sURLVariables = sPageURL.split('&');
+    for (var i = 0; i < sURLVariables.length; i++) 
+    {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam) 
+        {
+            return sParameterName[1];
+        }
+    }
+}
+    </script>
+    <script>
+
+var name = getUrlParameter('name');
+
+document.write("<h1>Well hi there " + name + ", how arya?</h1>");
+
+document.getElementById('nameDisplay').textContent = name;
+
+    </script>
+
+</body>
+</html>
