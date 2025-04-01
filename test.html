@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Query String Test</title>
-</head>
-<body>
 <p>Thanks so much for <a href="https://housinghub.org.au">any feedback</a> you're willing to share <span id="nameDisplay">Guest</span>!
-
-<img src="https://dabuttonfactory.com/button.png?t=Your+CTA+copy&f=Open+Sans-Bold&ts=26&tc=fff&hp=45&vp=20&c=11&bgt=unicolored&bgc=0026d">
 
     <script>
 
@@ -28,15 +18,13 @@ function getUrlParameter(sParam)
     </script>
     <script>
 
-var name = getUrlParameter('name');
+var client = getUrlParameter('client');
 var ref = getUrlParameter('ref');
 var row = getUrlParameter('row');
+var spec = getUrlParameter('spec');
 
-document.write("<p>Please copy and paste the following into your wrap-up email for " + name + ". The link and button will collect feedback specifically for the service for" + name + " (referred on " + ref + ")</p><p>Thanks so much for sharing any feedback you have!</p><img src=\"https://dabuttonfactory.com/button.png?t=Leave+" + name + "+Feedback&f=Open+Sans-Bold&ts=26&tc=fff&hp=45&vp=20&c=11&bgt=unicolored&bgc=0026d\"> ");
+document.write("<p>Please copy and paste the following into your wrap-up email for " + client + " and their team. The link and button will collect feedback specifically for their service (referred on " + ref + " Master row" + row + ")</p><hr><p>Thanks so much for <a href=\"housinghub.org.au\">sharing any feedback</a> you have!</p><img src=\"https://dabuttonfactory.com/button.png?t=Leave+" + spec + "+Feedback&f=Open+Sans-Bold&ts=26&tc=fff&hp=45&vp=20&c=11&bgt=unicolored&bgc=0026dd\"> ");
 
 document.getElementById('nameDisplay').textContent = name;
 
     </script>
-
-</body>
-</html>
